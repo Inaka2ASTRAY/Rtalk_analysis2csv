@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>アプリ内再生数推計ツール</title>
+    <meta charset="utf-8">
+    <meta name="viweport" contents="width=device-width, initial-scale=1">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <style>
+      body{
+      background-color:#1e3846;
+      color:white;
+      }
+      #RT{
+      color:#ffcc00
+      }
+      .ana{
+      width:25%;
+      float: left;
+      background-color:#14262f;
+      color:white;
+      }
+      .container{
+      overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span id="RT">Radiotalk アプリ内再生数推計ツール</span></h1>
+    <div id="app_lv" class="demo">
+      <div id="title">
+	トークタイトル:<input type="text" v-model="title">
+      </div>
+      <div class="container">
+	<div class="ana">
+	  <p>累計再生数</p>
+	  <input type="number" v-model="pv" >
+	</div>
+	<div class="ana">
+	  <p>累計再生時間</p>
+	  <input type="time" v-model="pt" step="1" >
+	</div>
+	<div class="ana">
+	  <p>平均再生率</p>
+	  <input type="number" v-model="pa" >
+	</div>
+	<div class="ana">
+	  <p>トーク時間</p>
+	  <input type="time" v-model="pb" max="12:00" >
+	</div>
+      </div>
+      <button v-on:click="change_time">send_to_csv</button>
+      <button v-on:click="dl_csv">DLCSV</button>
+      
+      <h2>総再生数{{ pv_arr[1] }}回の内、アプリ内再生数は{{ pv_arr[2] }}回、Webでの再生数は{{ pv_arr[3] }}回</h2>
+    </div>
+    <script src="./sample.js"></script>
+  </body>
+</html>
