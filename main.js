@@ -13,7 +13,7 @@ function minutes_conv(times){
     return parseFloat(mins);
       }
 function lishit(ttitle,pvAll,play_Sum,pArv,pbTime){
-    //
+    // 累計再生数からアプリ内再生数を抽出
     let pTime=minutes_conv(play_Sum);
     let pBack=minutes_conv(pbTime);
     let avr_pb=pArv*pTime;
@@ -27,7 +27,7 @@ function lishit(ttitle,pvAll,play_Sum,pArv,pbTime){
     
 }
 
-list={}
+list={} //グローバル変数の配列として使いたい
 const app_pv={
     data(){
 	return{
@@ -46,11 +46,10 @@ const app_pv={
 	    list[this.pv_arr[0]]=[this.pv_arr[1],this.pv_arr[2],this.pv_arr[3],this.pv_arr[4],this.pv_arr[5],this.pv_arr[6]];
 	},
 	dl_csv(){
+	    // listからcsvを生成
 	    list_key=Object.keys(list)
-	    //console.log(hass); //これを使ってやろう csv に出力しよう
 	    var csv = '\ufeff' + 'トークタイトル,累計再生数,アプリ内再生数(推計),Webでの再生数(推計),累計再生時間,トーク時間,平均再生率\n'
 	    for(i=0; i<list_key.length; i++){
-		//console.log(i)
 		csv += list_key[i]+ ','
 		list[list_key[i]].forEach(el => {
 		    csv += el + ','
@@ -60,15 +59,10 @@ const app_pv={
 	    let blob = new Blob([csv], { type: 'text/csv' })
 	    let link = document.createElement('a')
 	    link.href = window.URL.createObjectURL(blob)
-	    link.download = 'Result.csv'
+	    link.download = 'result.csv'
 	    link.click()
-	    /* 
-	       csv をDLする
-	    */
 	}
     }
 }
 
 const apps=Vue.createApp(app_pv).mount("#app_lv")
-
-//apps.conmposed('to_mins')
