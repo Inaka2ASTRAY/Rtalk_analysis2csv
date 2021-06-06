@@ -5,7 +5,7 @@ function minutes_conv(times){
 	hou=parseInt(time_arr[0])*60;
 	min=parseInt(time_arr[1]);
 	mins=hou+min;
-      }else{
+    }else{
 	  min=parseInt(time_arr[0]);
 	  sec=parseInt(time_arr[1])/60;
 	  mins=min+sec;
@@ -16,8 +16,8 @@ function lishit(ttitle,pvAll,play_Sum,pArv,pbTime){
     // 累計再生数からアプリ内再生数を抽出
     let pTime=minutes_conv(play_Sum);
     let pBack=minutes_conv(pbTime);
-    let avr_pb=pArv*pTime;
-    let ps_par=pBack*100;
+    let avr_pb=pArv*pBack;
+    let ps_par=pTime*100;
     let pv_app=ps_par/avr_pb+0.5;
     let pv_web=pvAll-(pv_app-0.5)+0.5;
     
@@ -43,11 +43,11 @@ const app_pv={
 	sent_csv(){
     	    this.pv_arr=lishit(this.title,this.pv,this.pt,this.pa,this.pb);
 	    list[this.pv_arr[0]]=[this.pv_arr[1],this.pv_arr[2],this.pv_arr[3],this.pv_arr[4],this.pv_arr[5],this.pv_arr[6]];
-	    this.title= '';
-	    this.pv= '';
-	    this.pt= '';
-	    this.pa= '';
-	    this.pb= ''; //入力した値を消すために空にする
+	    // this.title= '';
+	    // this.pv= '';
+	    // this.pt= '';
+	    // this.pa= '';
+	    // this.pb= ''; //入力した値を消すために空にする
 	},
 	dl_csv(){
 	    // listからcsvを生成
