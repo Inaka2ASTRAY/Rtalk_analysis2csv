@@ -11,35 +11,34 @@
     <h1><span id="RT">Radiotalk アプリ内再生数推計ツール</span></h1>
     <div id="app_lv" class="demo">
       <div id="title">
-	トークタイトル:<input type="text" v-model="title">
+	トークタイトル:<input type="text" v-model="title" required>
       </div>
       <div class="container">
 	<div class="ana">
 	  <p>累計再生数</p>
-	  <input type="number" v-model="pv" >
+	  <input type="number" v-model="pv" required>
 	</div>
 	<div class="ana">
 	  <p>累計再生時間</p>
-	  <input type="text" v-model="pt" placeholder="入力例)10:00" >
+	  <input type="text" v-model="pt" placeholder="入力例)10:00" required>
 	</div>
 	<div class="ana">
 	  <p>平均再生率</p>
-	  <input type="number" v-model="pa" >
+	  <input type="number" v-model="pa" required>
 	</div>
 	<div class="ana">
 	  <p>トーク時間</p>
-	  <input type="text" v-model="pb" placeholder="入力例)12:00" >
+	  <input type="text" v-model="pb" placeholder="入力例)12:00" required>
 	</div>
       </div>
-      <button v-on:click="change_time">Sent to CSV</button>
+      <button v-on:click="sent_csv">Sent to CSV</button>
       <button v-on:click="dl_csv">DLCSV</button>
       <h2>トークタイトル:{{ pv_arr[0] }}</h2>
       <h3>総再生数{{ pv_arr[1] }}回の内、アプリ内再生数は{{ pv_arr[2] }}回、Webでの再生数は{{ pv_arr[3] }}回</h3>
     </div>
     <script src="./main.js"></script>
     <footer>
-      <p>sorce:<a href="https://github.com/Inaka2ASTRAY/Rtalk_analysis2csv">github</a></p>
-      <p>© 2021 ASTRAY</p>
+      <p>sorce:<a href="https://github.com/Inaka2ASTRAY/Rtalk_analysis2csv">github</a>  2021 ASTRAY</p>
     </footer>
   </body>
 </html>

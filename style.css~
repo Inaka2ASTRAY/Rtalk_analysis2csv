@@ -1,0 +1,16 @@
+ body{
+      background-color:#1e3846;
+      color:white;
+      }
+      #RT{
+      color:#ffcc00
+      }
+      .ana{
+      width:25%;
+      float: left;
+      background-color:#14262f;
+      color:white;
+      }
+      .container{
+      overflow: hidden;
+      }
