@@ -42,8 +42,12 @@ const app_pv={
     methods:{
 	change_time(){
     	    this.pv_arr=lishit(this.title,this.pv,this.pt,this.pa,this.pb);
-	    
 	    list[this.pv_arr[0]]=[this.pv_arr[1],this.pv_arr[2],this.pv_arr[3],this.pv_arr[4],this.pv_arr[5],this.pv_arr[6]];
+	    this.title= '';
+	    this.pv= '';
+	    this.pt= '';
+	    this.pa= '';
+	    this.pb= ''; //入力した値を消すために空にする
 	},
 	dl_csv(){
 	    // listからcsvを生成
