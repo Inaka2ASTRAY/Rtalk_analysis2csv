@@ -37,7 +37,7 @@
 	</div>
 	<div class="ana">
 	  <p>累計再生時間</p>
-	  <input type="time" v-model="pt" step="1" >
+	  <input type="text" v-model="pt" placeholder="入力例)10:00" >
 	</div>
 	<div class="ana">
 	  <p>平均再生率</p>
@@ -45,7 +45,7 @@
 	</div>
 	<div class="ana">
 	  <p>トーク時間</p>
-	  <input type="time" v-model="pb" max="12:00" >
+	  <input type="text" v-model="pb" placeholder="入力例)12:00" >
 	</div>
       </div>
       <button v-on:click="change_time">send_to_csv</button>
