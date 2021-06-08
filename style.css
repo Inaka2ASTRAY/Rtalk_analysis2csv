@@ -6,7 +6,6 @@
     .container{
 	overflow: hidden;
     }
-    
  }
 body{
     background-color:#1e3846;
@@ -18,7 +17,7 @@ body{
 footer{
     text-align:center;
 }
-.ana{
+.container{
     background-color:#14262f;
     color:white;
 }
