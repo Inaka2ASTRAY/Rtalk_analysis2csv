@@ -1,19 +1,25 @@
- body{
-     background-color:#1e3846;
-     color:white;
+@media screen and (min-width: 700px) {
+    .ana{
+	width:25%;
+	float: left;
+    }
+    .container{
+	overflow: hidden;
+    }
+    
  }
- #RT{
-      color:#ffcc00
- }
- .ana{
-     width:25%;
-     float: left;
-     background-color:#14262f;
-     color:white;
- }
- .container{
-     overflow: hidden;
- }
- footer{
-     text-align:center;
- }
+body{
+    background-color:#1e3846;
+    color:white;
+}
+#RT{
+    color:#ffcc00
+}
+footer{
+    text-align:center;
+}
+.ana{
+    background-color:#14262f;
+    color:white;
+}
+ 

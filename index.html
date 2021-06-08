@@ -3,32 +3,35 @@
   <head>
     <title>アプリ内再生数推計ツール</title>
     <meta charset="utf-8">
-    <meta name="viweport" contents="width=device-width, initial-scale=1">
+    <!-- <meta name="viweport" contents="width=device-width, initial-scale=1">  -->
     <script src="https://unpkg.com/vue@next"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" >
   </head>
   <body>
     <h1><span id="RT">Radiotalk アプリ内再生数推計ツール</span></h1>
-    <div id="app_lv" class="demo">
+    <div id="app_lv">
       <div id="title">
-	トークタイトル:<input type="text" v-model="title" required>
+	トークタイトル:<input type="text" v-model="title" >
       </div>
       <div class="container">
 	<div class="ana">
 	  <p>累計再生数</p>
-	  <input type="number" v-model="pv" required>
+	  <input type="number" v-model="pv" >
 	</div>
 	<div class="ana">
 	  <p>累計再生時間</p>
-	  <input type="text" v-model="pt" placeholder="入力例)10:00" required>
+	  <input type="number" v-model="pt_h">時間
+	  <input type="number" v-model="pt_m" max="59" >分
+	  <input type="number" v-model="pt_s" max="59" >秒
 	</div>
 	<div class="ana">
 	  <p>平均再生率</p>
-	  <input type="number" v-model="pa" required>
+	  <input type="number" v-model="pa" max="100">
 	</div>
 	<div class="ana">
 	  <p>トーク時間</p>
-	  <input type="text" v-model="pb" placeholder="入力例)12:00" required>
+	  <input type="number" v-model="pb_m" max="12" >分
+	  <input type="number" v-model="pb_s" max="59" >秒
 	</div>
       </div>
       <button v-on:click="sent_csv">Sent to CSV</button>
