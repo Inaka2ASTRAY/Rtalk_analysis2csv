@@ -20,8 +20,8 @@
 	</div>
 	<div class="ana">
 	  <p>累計再生時間</p>
-	  <input type="number" v-model="pt_h">時間
-	  <input type="number" v-model="pt_m" max="59" >分
+	  <input type="number" v-model="pt_h">時間<br>
+	  <input type="number" v-model="pt_m" max="59" >分<br>
 	  <input type="number" v-model="pt_s" max="59" >秒
 	</div>
 	<div class="ana">
@@ -30,14 +30,13 @@
 	</div>
 	<div class="ana">
 	  <p>トーク時間</p>
-	  <input type="number" v-model="pb_m" max="12" >分
+	  <input type="number" v-model="pb_m" max="12" >分<br>
 	  <input type="number" v-model="pb_s" max="59" >秒
 	</div>
       </div>
       <button v-on:click="sent_csv">Sent to CSV</button>
       <button v-on:click="dl_csv">DLCSV</button>
-      <h2>トークタイトル:{{ pv_arr[0] }}</h2>
-      <h3>総再生数{{ pv_arr[1] }}回の内、アプリ内再生数は{{ pv_arr[2] }}回、Webでの再生数は{{ pv_arr[3] }}回</h3>
+      <h2>総再生数{{ pv_arr[1] }}回の内、アプリ内再生数は{{ pv_arr[2] }}回、Webでの再生数は{{ pv_arr[3] }}回</h2>
     </div>
     <script src="./main.js"></script>
     <footer>

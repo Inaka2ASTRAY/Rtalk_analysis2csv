@@ -1,12 +1,3 @@
-@media screen and (min-width: 900px) {
-    .ana{
-	width:25%;
-	float: left;
-    }
-    .container{
-	overflow: hidden;
-    }
- }
 body{
     background-color:#1e3846;
     color:white;
