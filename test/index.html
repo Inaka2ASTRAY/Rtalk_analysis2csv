@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="style.css" >
   </head>
   <body>
-    <h1 id="RT">Radiotalk アプリ内再生数推計ツール</h1>
+    <div class="container">
+      <div class="inputscreen">
+      <div class="space-bot text-center">
+	<h1 id="RT">Radiotalk アプリ内再生数推計ツール</h1>
+      </div>
     <div id="app_lv">
       <div id="title">
 	トークタイトル:<input type="text" v-model="title" >
       </div>
-      <div class="container">
+      <div class="inputG">
 	<div class="ana">
 	  <p>累計再生数</p>
 	  <input type="number" v-model="pv" >
@@ -42,5 +46,7 @@
     <footer>
       <p>sorce:<a href="https://github.com/Inaka2ASTRAY/Rtalk_analysis2csv">github</a>  2021 ASTRAY</p>
     </footer>
+      </div>
+    </div>
   </body>
 </html>
