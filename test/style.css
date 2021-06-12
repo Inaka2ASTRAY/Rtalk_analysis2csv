@@ -19,13 +19,13 @@ body{
 /* } */
 
 .container {
-    -moz-box-direction: normal;
-    -moz-box-orient: vertical;
+    //-moz-box-direction: normal;
+    //-moz-box-orient: vertical;
     min-height: 0px;
     min-width: 0px;
     padding: 0px;
     flex-direction: column;
-    -moz-box-align: stretch;
+    //-moz-box-align: stretch;
     border: 0px solid black;
     margin: 0px;
     z-index: 0;
