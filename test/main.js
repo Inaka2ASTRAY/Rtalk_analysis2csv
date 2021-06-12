@@ -84,5 +84,4 @@ const app_pv={
 	}
     }
 }
-
 const apps=Vue.createApp(app_pv).mount("#app_lv")
