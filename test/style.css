@@ -7,7 +7,7 @@ body{
   text-align: center;
 }
 
-./* space-bot{ */
+/* space-bot{ */
 /*   margin-bottom: 35px; */
 /* } */
 
@@ -16,30 +16,24 @@ body{
 /* } */
 
 .container {
-    justify-content: center;
-    max-width: 400px;
-    max-height: 100px;
-    margin-top: 10px;
-    -moz-box-align: stretch;
     -moz-box-direction: normal;
     -moz-box-orient: vertical;
-    align-items: center;
-    border: 0px solid black;
-    box-sizing: border-box;
-    display: flex;
-    flex-basis: auto;
-    flex-direction: column;
-    flex-shrink: 0;
-    margin: 0px;
-    margin-top: 0px;
     min-height: 0px;
     min-width: 0px;
     padding: 0px;
-    position: relative;
+    flex-direction: column;
+    -moz-box-align: stretch;
+    border: 0px solid black;
+    margin: 0px;
     z-index: 0;
-    color: white;
+    flex-shrink: 0;
+    flex-basis: auto;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
 }
-
+    
 #RT{
     color:#ffcc00
 }
@@ -48,9 +42,8 @@ footer{
 }
 .inputG{
     background-color:#14262f;
-    color:white;
 }
-.input{
+input{
     background-color:white;
-    color:white;
+    color:black;
 }
