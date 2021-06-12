@@ -15,24 +15,24 @@ body{
 /*   margin-top: 35px; */
 /* } */
 
-.container {
-    //-moz-box-direction: normal;
-    //-moz-box-orient: vertical;
-    min-height: 0px;
-    min-width: 0px;
-    padding: 0px;
-    flex-direction: column;
-    //-moz-box-align: stretch;
-    border: 0px solid black;
-    margin: 0px;
-    z-index: 0;
-    flex-shrink: 0;
-    flex-basis: auto;
-    align-items: center;
-    display: flex;
-    box-sizing: border-box;
-    position: relative;
-}
+/* .container { */
+/*     //-moz-box-direction: normal; */
+/*     //-moz-box-orient: vertical; */
+/*     min-height: 0px; */
+/*     min-width: 0px; */
+/*     padding: 0px; */
+/*     flex-direction: column; */
+/*     //-moz-box-align: stretch; */
+/*     border: 0px solid black; */
+/*     margin: 0px; */
+/*     z-index: 0; */
+/*     flex-shrink: 0; */
+/*     flex-basis: auto; */
+/*     align-items: center; */
+/*     display: flex; */
+/*     box-sizing: border-box; */
+/*     position: relative; */
+/* } */
     
 #RT{
     color:#ffcc00
