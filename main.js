@@ -4,8 +4,11 @@ function minutes_conv(times){
     let time_arr=times.split(":");
     if(time_arr.length==3 && time_arr[0]!=""){
 	hou=parseInt(time_arr[0])*60;
-	min=parseInt(time_arr[1]); // 空だった時の判定をどうするか
-	mins=hou+min;
+	if(time_arr[1]!=""){
+	    min=parseInt(time_arr[1]); // 空だった時の判定をどうするか
+	    mins=hou+min;
+	}
+	mins=hou;
     }else if(time_arr.length<=1 && time_arr[2]!=""){
 	mins=parseFloat(time_arr[2])/60;
     }else{
@@ -60,8 +63,6 @@ const app_pv={
 	sent_csv(){
 	    let totaltime=this.pt_h+":"+this.pt_m+":"+this.pt_s;
 	    let playback=this.pb_m+":"+this.pb_s;
-	    console.log("再生時間"+totaltime);
-	    console.log("トーク時間"+playback);
     	    this.pv_arr=lishit(this.title,this.pv,totaltime,this.pa,playback);
 	    list[this.pv_arr[0]]=[this.pv_arr[1],this.pv_arr[2],this.pv_arr[3],this.pv_arr[4],this.pv_arr[5],this.pv_arr[6]];
 	},
