@@ -67,7 +67,7 @@ const app_pv={
 	},
 	dl_csv(){
 	    // listからcsvを生成
-	    list_key=Object.keys(list)
+	    list_key=Object.keys(this.list)
 	    var csv = '\ufeff' + 'トークタイトル,累計再生数,アプリ内再生数(推計),Webでの再生数(推計),累計再生時間,トーク時間,平均再生率\n'
 	    for(i=0; i<list_key.length; i++){
 		csv += list_key[i]+ ','
@@ -85,3 +85,16 @@ const app_pv={
     }
 }
 const apps=Vue.createApp(app_pv).mount("#app_lv")
+
+
+// apps.component('user-table',{
+//     template : `<tr><td>{{ pv_arr[0] }}</td>
+//                  <td>{{  pv_arr[1] }}</td>
+//                  <td>{{  pv_arr[2] }}</td>
+//                  <td>{{  pv_arr[3] }}</td>
+// 		 <td>{{  pv_arr[4] }}</td>
+// 		 <td>{{  pv_arr[5] }}</td>
+// 		 <td>{{  pv_arr[6] }}</td>
+//                  </tr>`,
+//     props : ['user']
+// });

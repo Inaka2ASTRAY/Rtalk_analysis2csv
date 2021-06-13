@@ -16,7 +16,7 @@
       <h1 id="RT">Radiotalk アプリ内再生数推計ツール</h1>
      
 	<div id="app_lv">
-	  トークタイトル:<input type="text" v-model="title" >
+	  <label>トークタイトル:</label><input type="text" v-model="title" >
 	<div class="inputG">
 	  
 	  <div class="ana">
@@ -44,6 +44,24 @@
 	<space>
 	<button class="btn-rad" v-on:click="dl_csv">DLCSV</button>
 	<h2>総再生数{{ pv_arr[1] }}回の内<br>アプリ内再生数は{{ pv_arr[2] }}回<br>Webでの再生数は{{ pv_arr[3] }}回</h2>
+	
+ <!-- <table class="table"> -->
+ <!--        <thead  class="theads"> -->
+ <!--            <tr> -->
+ <!--                <th>トークタイトル</th> -->
+ <!--                <th>累計再生数</th> -->
+ <!--                <th>アプリ内再生数(推計)</th> -->
+ <!--                <th>Webでの再生数(推計)</th> -->
+ <!-- 		<th>累計再生時間</th> -->
+ <!-- 		<th>トーク時間</th> -->
+ <!-- 		<th>平均再生率</th> -->
+ <!--            </tr> -->
+ <!--        </thead> -->
+ <!--        <tbody> -->
+ <!--          <tr is="user-table" ></tr> -->
+ <!--        </tbody> -->
+ <!--    </table> -->
+	
       </div>
     <script src="./main.js"></script>
     <footer>
