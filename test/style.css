@@ -1,39 +1,16 @@
+/* @madia screen(min-width:1000px){ */
+/*     .container{ */
+/*     display:flex; */
+/*     align-items:center; */
+/*     -webkit-flex-direction: column; */
+/* } */
+/* } */
+
 body{
-    //min-height:100%;
     background-color:#1e3846;
     color:white;
 }
-.text-center{
-  text-align: center;
-}
 
-/* space-bot{ */
-/*   margin-bottom: 35px; */
-/* } */
-
-/* .space-top{ */
-/*   margin-top: 35px; */
-/* } */
-
-/* .container { */
-/*     //-moz-box-direction: normal; */
-/*     //-moz-box-orient: vertical; */
-/*     min-height: 0px; */
-/*     min-width: 0px; */
-/*     padding: 0px; */
-/*     flex-direction: column; */
-/*     //-moz-box-align: stretch; */
-/*     border: 0px solid black; */
-/*     margin: 0px; */
-/*     z-index: 0; */
-/*     flex-shrink: 0; */
-/*     flex-basis: auto; */
-/*     align-items: center; */
-/*     display: flex; */
-/*     box-sizing: border-box; */
-/*     position: relative; */
-/* } */
-    
 #RT{
     color:#ffcc00
 }
@@ -49,18 +26,14 @@ input{
     margin:1%;
 }
 .btn-rad {
-  display: inline-block;
   padding: 7px 20px;
   margin: 1% ;
-  border-radius: 25px;
-  text-decoration: none;
+  border-radius: 30px;
   color: #14262f;
   background-color: #ffcc00;
-  transition: .4s;
 }
 
 .btn-rad:hover {
     background-color:#c9a206;
-  //background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
 }
 
